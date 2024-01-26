@@ -1,13 +1,18 @@
-import Link from "next/link";
-import Logo from "./Logo";
-const Navbar =  ({ toggle }: { toggle: () => void }) => {
+import Link from 'next/link'
+import Logo from './Logo'
+const Navbar = ({ toggle }: { toggle: () => void }) => {
   return (
     <>
-      <div className="w-full h-20 bg-zinc-900 sticky top-0">
+      <div className="w-full h-20sticky top-0 text-sky-500">
         <div className="container mx-auto px-4 h-full">
-          <div className="flex justify-between items-center h-full">
-            <Logo />
-            <ul className="hidden md:flex gap-x-6 text-white">
+          <div className="flex flex-col h-full">
+            <div className="flex flex-row items-center gap-x-5">
+              <h1 className=" text-6xl font-semibold">John Aagaard</h1>
+              <Logo />
+            </div>
+            <h2 className="text-4xl mt-3 font-normal">Software Engineer</h2>
+            <p className="mt-3">Crafting innovative solutions with code, one line at a time</p>
+            <ul className="hidden md:flex flex-col mt-16 gap-y-6 text-white">
               <li>
                 <Link href="/about">
                   <p className="text-sky-500 font-sans">About me</p>
@@ -15,12 +20,12 @@ const Navbar =  ({ toggle }: { toggle: () => void }) => {
               </li>
               <li>
                 <Link href="/projects">
-                  <p  className="text-sky-500">Projects</p>
+                  <p className="text-sky-500">Projects</p>
                 </Link>
               </li>
               <li>
                 <Link href="/contact">
-                  <p  className="text-sky-500">Contact</p>
+                  <p className="text-sky-500">Contact</p>
                 </Link>
               </li>
             </ul>
@@ -28,7 +33,7 @@ const Navbar =  ({ toggle }: { toggle: () => void }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
 export default Navbar

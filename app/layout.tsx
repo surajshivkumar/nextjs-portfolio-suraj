@@ -1,7 +1,5 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk } from 'next/font/google'
-import Footer from './components/footer'
-import Navigation from './components/navigation'
 import './globals.css'
 
 const spaceGrotesk = Space_Grotesk({
@@ -22,10 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
-      <body className="bg-zinc-900 w-full h-screen">
-        <Navigation />
+      <body className="bg-zinc-900 w-full h-screen mx-auto">
         {children}
-        <Footer />
       </body>
     </html>
   )

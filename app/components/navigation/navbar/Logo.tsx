@@ -36,7 +36,7 @@ const Logo = () => {
   return (
     <>
       <Link href="/" style={{ display: showButton ? 'none' : 'block' }}>
-        <div className="group h-[60px] w-[60px] [perspective:1000px]">
+        <div className="group h-[60px] w-[60px] [perspective:1000px] flex flex-row">
           <div className="h-[60px] w-[60px] rounded-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
               <Image
