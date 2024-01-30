@@ -1,8 +1,9 @@
-import { DiMysql, DiPostgresql } from 'react-icons/di'
 import { FaCss3Alt, FaHtml5, FaNode, FaReact } from 'react-icons/fa'
 
 import { BiLogoTypescript } from 'react-icons/bi'
+import { DiPostgresql } from 'react-icons/di'
 import { FaGolang } from 'react-icons/fa6'
+import { IoLogoJavascript } from 'react-icons/io5'
 import { SiTailwindcss } from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { motion } from 'framer-motion'
@@ -11,13 +12,13 @@ const skills = [
   { icon: FaHtml5, name: 'HTML5' },
   { icon: FaCss3Alt, name: 'CSS3' },
   { icon: FaReact, name: 'React' },
-  { icon: FaNode, name: 'Node.js' },
-  { icon: DiMysql, name: 'MySQL' },
-  { icon: DiPostgresql, name: 'PostgreSQL' },
-  { icon: FaGolang, name: 'Golang' },
-  { icon: SiTailwindcss, name: 'Tailwind CSS' },
+  { icon: IoLogoJavascript, name: 'JavaScript' },
   { icon: BiLogoTypescript, name: 'TypeScript' },
+  { icon: SiTailwindcss, name: 'Tailwind CSS' },
   { icon: TbBrandNextjs, name: 'Next.js' },
+  { icon: FaNode, name: 'Node.js' },
+  { icon: FaGolang, name: 'Golang' },
+  { icon: DiPostgresql, name: 'PostgreSQL' },
 ]
 
 const halfwayIndex = Math.ceil(skills.length / 2)
@@ -26,18 +27,19 @@ const skillsColumn2 = skills.slice(halfwayIndex)
 
 export default function Skills() {
   return (
-    <div className="flex">
+    <div id="Skills" className="section w-full flex justify-around">
       <div className="flex flex-col items-center gap-4">
         {skillsColumn1.map(({ icon: Icon, name }) => (
           <motion.div
             key={name}
             whileHover={{ x: 20 }}
             transition={{ type: 'spring', stiffness: 300 }}
+            className="flex flex-row items-center justify-start gap-4 group"
           >
-            <Icon className="text-4xl" />
-            <span className="opacity-0 hover:opacity-100 transition-opacity">
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity w-24 text-white">
               {name}
             </span>
+            <Icon className="text-4xl flex-shrink-0 group-hover:text-white" />
           </motion.div>
         ))}
       </div>
@@ -47,11 +49,12 @@ export default function Skills() {
             key={name}
             whileHover={{ x: 20 }}
             transition={{ type: 'spring', stiffness: 300 }}
+            className="flex flex-row items-center justify-start gap-4 group"
           >
-            <Icon className="text-4xl" />
-            <span className="opacity-0 hover:opacity-100 transition-opacity">
+            <span className="opacity-0 group-hover:opacity-100 transition-opacity w-24 text-white">
               {name}
             </span>
+            <Icon className="text-4xl flex-shrink-0 group-hover:text-white" />
           </motion.div>
         ))}
       </div>

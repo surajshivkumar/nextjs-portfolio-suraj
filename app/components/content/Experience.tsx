@@ -9,56 +9,66 @@ export default function Experience() {
 
   const experience = [
     {
-      date: 'Jan 2014 - Aug 2016',
+      date: 'June 2021 - Jan 2024',
       position: 'Software Engineer',
       company: 'Prodly',
-      description: `My main focus these days is building products and leading projects for our clients at Upstatement. I most enjoy building software in the sweet spot where design and engineering meet — things 
-      that look good but are also built well under the hood. In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.`,
+      description: `At Prodly, I significantly improved development efficiency and performance with React and 
+      Node.js, leading to a 20% increase in speed and a 15% enhancement in performance metrics. My role involved streamlining 
+      customer onboarding and enhancing integration processes, contributing to the advancement of our product's capabilities and the satisfaction of a diverse client base.`,
     },
     {
-      date: 'jan 2011 - aug 2016',
-      position: 'software engineer',
-      company: 'Prodly',
-      description: `My main focus these days is building products and leading projects for our clients at Upstatement. I most enjoy building software in the sweet spot where design and engineering meet — things 
-        that look good but are also built well under the hood. In my free time, I've also released an online video course that covers everything you need to know to build a web app with the Spotify API.`,
+      date: 'Jan 2022 - April 2016',
+      position: 'React Native Engineer',
+      company: 'Awesemo',
+      description: `As a React Native Contractor at Awesemo, I efficiently engineered multiple app pages in line with design specifications and integrated API endpoints for optimal data management.
+      My collaborative efforts with design and API teams facilitated timely app store launches on both Apple and Android platforms, meeting critical deadlines within a 4-month timeframe.`,
+    },
+    {
+      date: 'Sept 2019 - May 2021',
+      position: 'Software Engineer',
+      company: 'Ambi Inc',
+      description: `At Ambi Inc, I embraced diverse roles, from Software Engineer Intern to full Software Engineer specializing in React & Node. I contributed to refining workflows between product and engineering teams, enhancing feature development and prioritization. 
+      My work in developing API services and building reusable React components significantly improved user experiences and customer success. Additionally, I was involved in creating tools with Go and React for internal administrative use, improving customer service and sales data analytics. My efforts in mobile app development ensured feature parity with our web application, offering users a seamless cross-platform experience.`,
     },
   ]
   return (
-    <ol className="mb-12 ">
-      {experience.map((exp, index) => (
-        <div
-          key={exp.date}
-          onMouseEnter={() => setHoveredItem(index)}
-          onMouseLeave={() => setHoveredItem(null)}
-          className={`mb-12 grid grid-cols-2 gap-2 p-4 rounded-md ${
-            hoveredItem !== null && hoveredItem !== index ? 'opacity-50' : ''
-          } ${hoveredItem === null ? '' : 'hover:bg-gray-800'}`}
-        >
-          <motion.div animate={{ y: hoveredItem === index ? '45%' : '0%' }}>
-            <div
-              className={`${hoveredItem === index ? 'text-sky-500' : 'text-slate-300'} font-thin`}
-            >
-              {exp.date}
+    <div id="Experience" className="section mb-12 ">
+      <ol>
+        {experience.map((exp, index) => (
+          <li
+            key={exp.date}
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
+            className={`mb-12 grid grid-cols-[1fr_2fr] gap-2 p-4 rounded-md ${
+              hoveredItem !== null && hoveredItem !== index ? 'opacity-50' : ''
+            } ${hoveredItem === null ? '' : 'hover:bg-gray-800'}`}
+          >
+            <motion.div animate={{ y: hoveredItem === index ? '45%' : '0%' }}>
+              <div
+                className={`${hoveredItem === index ? 'text-sky-500' : 'text-slate-300'} font-thin`}
+              >
+                {exp.date}
+              </div>
+            </motion.div>
+            <div className="grid grid-cols-1 gap-2">
+              <div
+                className={`font-semibold ${hoveredItem === index ? 'text-white' : ''} flex items-center w-fit`}
+              >
+                <div className="w-fit">{exp.position}</div>
+                <FaArrowRightLong
+                  className={`mx-2 ${hoveredItem === index ? 'text-sky-500' : 'text-white'}`}
+                />
+                {exp.company}
+              </div>
+              <div
+                className={`font-thin ${hoveredItem === index ? 'text-gray-400' : ''}`}
+              >
+                {exp.description}
+              </div>
             </div>
-          </motion.div>
-          <div className="grid grid-cols-1 gap-2">
-            <div
-              className={`font-bold ${hoveredItem === index ? 'text-white' : ''} flex items-center`}
-            >
-              {exp.position}
-              <FaArrowRightLong
-                className={`mx-2 ${hoveredItem === index ? 'text-sky-500' : 'text-white'}`}
-              />
-              {exp.company}
-            </div>
-            <div
-              className={`font-thin ${hoveredItem === index ? 'text-gray-400' : ''}`}
-            >
-              {exp.description}
-            </div>
-          </div>
-        </div>
-      ))}
-    </ol>
+          </li>
+        ))}
+      </ol>
+    </div>
   )
 }

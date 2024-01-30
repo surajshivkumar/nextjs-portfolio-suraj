@@ -1,17 +1,15 @@
-"use client";
-import { useState } from "react";
-import Navbar from "./navbar";
+import Navbar from './navbar'
 
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
+export type NavigationProps = {
+  currentSection: string | null
+}
+
+const Navigation = ({ currentSection }: NavigationProps) => {
   return (
     <div>
-      <Navbar toggle={toggle} />
+      <Navbar currentSection={currentSection} />
     </div>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
