@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div id="About" className="section grid grid-cols-1 gap-4 p-2">
+    <div id="About" className="section grid grid-cols-1 gap-4 p-2 mb-12">
       <div>
         As a software engineer specializing in JavaScript, React, and Node.js, I
         am passionate about building innovative software solutions and

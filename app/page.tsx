@@ -10,7 +10,7 @@ import Skills from './components/content/Skills'
 import useMousePosition from '@/hooks/useMousePosition'
 
 export default function Home() {
-  const [currentSection, setCurrentSection] = useState<string | null>(null)
+  const [currentSection, setCurrentSection] = useState<string | null>('About')
 
   const { x, y } = useMousePosition()
 
@@ -46,12 +46,12 @@ export default function Home() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={gradientStyle}
       ></div>
-      <div className="h-screen grid grid-cols-2 gap-4 px-24 mx-auto z-50 max-w-screen overflow-auto">
-        <header className="sticky top-0 self-start h-screen flex flex-col justify-between items-center py-24 w-full max-w-[1280px] mx-auto">
+      <div className="h-fit md:h-screen grid grid-cols-1 md:grid-cols-2 gap-4 md:px-24 md:mx-auto z-50 max-w-screen overflow-auto">
+        <header className="md:sticky top-0 self-start md:h-screen flex flex-col md:justify-between items-center md:py-24 w-full max-w-[1280px] mx-auto">
           <Navigation currentSection={currentSection} />
           <Footer />
         </header>
-        <div className="px-4 container text-sky-500 py-24 grid grid-cols-1 gap-7 w-full max-w-[700px] mx-auto">
+        <div className="px-4 container text-sky-500 md:py-24 grid grid-cols-1 gap-7 w-full max-w-[700px] mx-auto">
           <About />
           <Experience />
           <Skills />

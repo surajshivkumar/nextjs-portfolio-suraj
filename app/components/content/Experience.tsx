@@ -1,6 +1,7 @@
 'use client'
 
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { GrFormView } from 'react-icons/gr'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 
@@ -32,14 +33,23 @@ export default function Experience() {
     },
   ]
   return (
-    <div id="Experience" className="section mb-12 ">
-      <ol>
+    <div id="Experience" className="section h-fit ">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        className="flex flex-row items-center gap-3 hover:text-white w-fit p-2 mb-12"
+      >
+        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+          View Full Resume
+        </a>
+        <GrFormView className="text-2xl" />
+      </motion.button>
+      <ol className="mb-12">
         {experience.map((exp, index) => (
           <li
             key={exp.date}
             onMouseEnter={() => setHoveredItem(index)}
             onMouseLeave={() => setHoveredItem(null)}
-            className={`mb-12 grid grid-cols-[1fr_2fr] gap-2 p-4 rounded-md ${
+            className={`grid grid-cols-[1fr_2fr] gap-2 p-4 rounded-md ${
               hoveredItem !== null && hoveredItem !== index ? 'opacity-50' : ''
             } ${hoveredItem === null ? '' : 'hover:bg-gray-800'}`}
           >

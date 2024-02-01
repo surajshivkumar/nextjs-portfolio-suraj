@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 export default function Footer() {
   return (
-    <div className="text-sky-500 sticky bottom-0 flex flex-row justify-between max-w-[200px] w-full items-center text-3xl">
+    <div className=" text-sky-500 sticky bottom-0 flex flex-row justify-between max-w-[200px] w-full items-center text-3xl mt-4">
       <motion.a
         whileHover={{ scale: 1.2 }}
         href="https://github.com/jaagaard01"

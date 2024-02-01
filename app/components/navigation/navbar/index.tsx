@@ -13,7 +13,7 @@ const Navbar = ({ currentSection }: NavigationProps) => {
 
     // Adjust the offset based on the section
     if (sectionId === 'About') {
-      document.getElementById(sectionId)?.scrollTo({ y: 0 })
+      document.getElementById(sectionId)?.scrollTo(0, 0)
     } else if (sectionId === 'Experience') {
       // Scroll to the middle of the page
       offsetPosition =
@@ -25,8 +25,6 @@ const Navbar = ({ currentSection }: NavigationProps) => {
 
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
   }
-
-  console.log(currentSection, 'current section')
 
   const navBarItems = [
     { value: 'About' },
