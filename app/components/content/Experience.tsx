@@ -12,7 +12,7 @@ export default function Experience() {
     {
       date: 'June 2021 - Jan 2024',
       position: 'Software Engineer',
-      company: 'Prodly',
+      company: 'Prodly Inc',
       description: `At Prodly, I significantly improved development efficiency and performance with React and 
       Node.js, leading to a 20% increase in speed and a 15% enhancement in performance metrics. My role involved streamlining 
       customer onboarding and enhancing integration processes, contributing to the advancement of our product's capabilities and the satisfaction of a diverse client base.`,
