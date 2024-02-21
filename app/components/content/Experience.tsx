@@ -39,7 +39,7 @@ export default function Experience() {
         className="flex flex-row items-center gap-3 hover:text-white w-fit p-2 mb-12"
       >
         <a
-          href="/John Aagaard Resume.pdf"
+          href="/John Aagaard - Software Engineer.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
