@@ -27,7 +27,7 @@ const skillsColumn2 = skills.slice(halfwayIndex)
 
 export default function Skills() {
   return (
-    <div id="Skills" className="section w-full flex justify-around">
+    <section id="Skills" className="section w-full flex justify-around">
       <div className="flex flex-col items-center gap-4">
         {skillsColumn1.map(({ icon: Icon, name }) => (
           <motion.div
@@ -58,6 +58,6 @@ export default function Skills() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   )
 }

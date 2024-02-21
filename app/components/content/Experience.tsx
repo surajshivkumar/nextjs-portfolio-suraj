@@ -33,7 +33,7 @@ export default function Experience() {
     },
   ]
   return (
-    <div id="Experience" className="section h-fit ">
+    <section id="Experience" className="h-fit ">
       <motion.button
         whileHover={{ scale: 1.05 }}
         className="flex flex-row items-center gap-3 hover:text-white w-fit p-2 mb-12"
@@ -83,6 +83,6 @@ export default function Experience() {
           </li>
         ))}
       </ol>
-    </div>
+    </section>
   )
 }

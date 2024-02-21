@@ -27,11 +27,11 @@ export default function Home() {
           }
         })
       },
-      { threshold: 0.5 }
+      { threshold: [0.8] }
     ) // Adjust threshold as needed
 
     // Observe each section
-    document.querySelectorAll('.section').forEach((section) => {
+    document.querySelectorAll('section').forEach((section) => {
       observer.observe(section)
     })
 
