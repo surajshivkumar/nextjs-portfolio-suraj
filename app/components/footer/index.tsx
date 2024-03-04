@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
 import { motion } from 'framer-motion'
 
@@ -7,21 +7,21 @@ export default function Footer() {
     <div className=" text-sky-500 sticky bottom-0 flex flex-row justify-between max-w-[200px] w-full items-center text-3xl mt-4">
       <motion.a
         whileHover={{ scale: 1.2 }}
-        href="https://github.com/jaagaard01"
+        href="https://github.com/surajshivkumar"
       >
         <FaGithub className="cursor-pointer hover:text-white" />
       </motion.a>
       <motion.a
         whileHover={{ scale: 1.2 }}
-        href="https://www.linkedin.com/in/john-aagaard/"
+        href="https://www.linkedin.com/in/suraj-shivakumar/"
       >
         <FaLinkedin className="cursor-pointer hover:text-white" />
       </motion.a>
       <motion.a
         whileHover={{ scale: 1.2 }}
-        href="https://twitter.com/john_aagaard"
+        href="https://www.instagram.com/shotbysuri/"
       >
-        <FaTwitter className="cursor-pointer hover:text-white" />
+        <FaInstagram className="cursor-pointer hover:text-white" />
       </motion.a>
     </div>
   )

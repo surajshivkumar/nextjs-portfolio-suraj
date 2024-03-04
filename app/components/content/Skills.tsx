@@ -1,24 +1,30 @@
-import { FaCss3Alt, FaHtml5, FaNode, FaReact } from 'react-icons/fa'
+import { FaCss3Alt, FaHtml5, FaNode, FaPython } from 'react-icons/fa'
 
 import { BiLogoTypescript } from 'react-icons/bi'
 import { DiPostgresql } from 'react-icons/di'
 import { FaGolang } from 'react-icons/fa6'
 import { IoLogoJavascript } from 'react-icons/io5'
-import { SiTailwindcss } from 'react-icons/si'
+import {
+  SiTailwindcss,
+  SiTensorflow,
+  SiPytorch,
+  SiFlask,
+  SiTableau,
+} from 'react-icons/si'
 import { TbBrandNextjs } from 'react-icons/tb'
 import { motion } from 'framer-motion'
 
 const skills = [
+  { icon: FaPython, name: 'Python' },
+  { icon: DiPostgresql, name: 'PostgreSQL' },
+  { icon: SiTensorflow, name: 'Tensorflow' },
+  { icon: SiPytorch, name: 'Pytorch' },
+  { icon: SiFlask, name: 'Flask' },
+  { icon: SiTableau, name: 'Tableau' },
+  { icon: IoLogoJavascript, name: 'JavaScript' },
   { icon: FaHtml5, name: 'HTML5' },
   { icon: FaCss3Alt, name: 'CSS3' },
-  { icon: FaReact, name: 'React' },
-  { icon: IoLogoJavascript, name: 'JavaScript' },
-  { icon: BiLogoTypescript, name: 'TypeScript' },
   { icon: SiTailwindcss, name: 'Tailwind CSS' },
-  { icon: TbBrandNextjs, name: 'Next.js' },
-  { icon: FaNode, name: 'Node.js' },
-  { icon: FaGolang, name: 'Golang' },
-  { icon: DiPostgresql, name: 'PostgreSQL' },
 ]
 
 const halfwayIndex = Math.ceil(skills.length / 2)

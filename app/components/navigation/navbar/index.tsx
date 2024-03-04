@@ -16,11 +16,14 @@ const Navbar = ({ currentSection }: NavigationProps) => {
       document.getElementById(sectionId)?.scrollTo(0, 0)
     } else if (sectionId === 'Experience') {
       // Scroll to the middle of the page
-      offsetPosition =
-        topPosition - window.innerHeight / 2 + sectionRect?.height / 2
+      document.getElementById(sectionId)?.scrollTo(0, 0)
+    } else if (sectionId === 'Works') {
+      // Scroll to the bottom of the page
+      console.log('a')
+      document.getElementById(sectionId)?.scrollTo(0, 0)
     } else if (sectionId === 'Skills') {
       // Scroll to the bottom of the page
-      offsetPosition = topPosition - window.innerHeight + sectionRect?.height
+      document.getElementById(sectionId)?.scrollTo(0, 0)
     }
 
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' })
@@ -29,6 +32,7 @@ const Navbar = ({ currentSection }: NavigationProps) => {
   const navBarItems = [
     { value: 'About' },
     { value: 'Experience' },
+    { value: 'Works' },
     { value: 'Skills' },
   ]
   return (
@@ -36,10 +40,10 @@ const Navbar = ({ currentSection }: NavigationProps) => {
       <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col h-full">
           <div className="flex flex-row items-center gap-x-5">
-            <h1 className=" text-5xl font-semibold">John Aagaard</h1>
+            <h1 className=" text-5xl font-semibold">Suraj Shivakumar</h1>
             <Logo />
           </div>
-          <h2 className="text-2xl mt-3 font-normal">Software Engineer</h2>
+          <h2 className="text-2xl mt-3 font-normal">Data Scientist</h2>
           <p className="mt-3">
             Crafting innovative solutions with code, one line at a time
           </p>

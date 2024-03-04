@@ -13,10 +13,10 @@ const Logo = () => {
     setWidth(newWidth)
   }
 
-  useEffect(() => {
-    window.addEventListener('resize', updateWidth)
-    updateWidth()
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener('resize', updateWidth)
+  //   updateWidth()
+  // }, [])
 
   // change between the logo and the button when the user scrolls
   const [showButton, setShowButton] = useState(false)
@@ -39,13 +39,13 @@ const Logo = () => {
         <div className="group h-[60px] w-[60px] [perspective:1000px] flex flex-row">
           <div className="h-[60px] w-[60px] rounded-full transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <Image
+              {/* <Image
                 className="h-[60px] w-[60px] rounded-full"
-                src="/images/closeup.jpg"
+                src="/images/closeup.png"
                 alt="Closeup"
                 width={width < 1024 ? '150' : '60'}
                 height={width < 1024 ? '45' : '60'}
-              />
+              /> */}
             </div>
             <div className="absolute inset-0 h-[60px] w-[60px] rounded-full bg-black/80 text-center [transform:rotateY(180deg)] [backface-visibility:hidden] border border-black">
               <div className="flex h-[60px] w-[60px] rounded-full flex-col items-center justify-center">

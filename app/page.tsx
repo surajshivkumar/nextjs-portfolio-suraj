@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 import About from './components/content/About'
 import Experience from './components/content/Experience'
+import Works from './components/content/Works'
 import Footer from './components/footer'
 import Navigation from './components/navigation'
 import Skills from './components/content/Skills'
@@ -54,6 +55,7 @@ export default function Home() {
         <div className="px-4 container text-sky-500 md:py-24 grid grid-cols-1 gap-7 w-full max-w-[700px] mx-auto">
           <About />
           <Experience />
+          <Works />
           <Skills />
         </div>
       </div>

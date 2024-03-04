@@ -10,8 +10,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Johnnny A',
-  description: "John Aagaard's personal website",
+  title: 'Suraj S',
+  description: "Suraj Shivakumar's portfolio",
 }
 
 export default function RootLayout({
@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={spaceGrotesk.className}>
-      <body className="bg-zinc-900 w-full h-screen mx-auto">
-        {children}
-      </body>
+      <body className="bg-zinc-900 w-full h-screen mx-auto">{children}</body>
     </html>
   )
 }

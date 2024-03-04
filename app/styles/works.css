@@ -1,0 +1,74 @@
+/* works.css */
+
+#Works {
+  padding: 4rem 0; /* Adjust the padding as necessary */
+  /* background: transparent; Background color for the section, change as needed */
+}
+
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Spacing between thumbnails */
+  justify-content: center; /* Center thumbnails horizontally */
+
+  margin-left: 0rem;
+}
+
+.thumbnail {
+  background: transparent; /* Background color for the thumbnail */
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); Soft shadow for depth */
+  border: rgb(8, 201, 244);
+  border-radius: 8px; /* Rounded corners for the thumbnail */
+  overflow: hidden;
+  width: 500px; /* Width of the thumbnail, adjust as needed */
+}
+
+.thumbnail img {
+  width: 100%; /* Ensure the image covers the full width */
+  height: auto; /* Maintain aspect ratio */
+  border-bottom: 1px solid rgb(195, 97, 97); /* A subtle separator between image and text */
+  border: rgb(0, 242, 255);
+}
+
+.textBox {
+  padding: 2rem; /* Padding inside the text box */
+  background-color: rgba(61, 77, 91, 0.28);
+}
+
+.textBox h3 {
+  margin: 0;
+  /* color: #333; */
+  font-size: 1.2rem; /* Title font size */
+  border: white;
+}
+
+.textBox p {
+  /* color: #666; Paragraph text color */
+  font-size: 1rem; /* Paragraph font size */
+  line-height: 1.5; /* Line height for better readability */
+  margin-top: 0.5rem; /* Spacing between title and paragraph */
+  /* border: white; */
+  /* background-color: aliceblue; */
+}
+
+.thinLine {
+  width: 100%; /* Full width of its container */
+  height: 3px; /* Thin line height */
+  background-color: rgb(
+    59 130 246 / 0.2
+  ); /* Line color, can be changed as needed */
+  margin: 0.2rem 0; /* Optional: Adds vertical space around the line */
+}
+
+.heading {
+  font-size: 3rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.icon-container {
+  display: flex;
+  align-items: center; /* This centers the icons vertically relative to each other */
+  gap: 30px;
+  margin-top: 10px;
+  margin-left: 13rem; /* Adjust the gap as needed */
+}
